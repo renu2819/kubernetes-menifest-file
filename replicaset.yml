@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+    name: web1-app-rs
+spec:
+    template:
+        metadata:
+             name: uv1
+             labels:
+               name: xyz
+        spec:        
+            containers:
+            - name: uv1
+              image: nginx
+    selector:
+      matchLabels:
+            name: xyz
+    replicas: 3

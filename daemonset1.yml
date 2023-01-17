@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+      name: ds-master
+spec:
+     template: # template from pod.yml
+       metadata:
+            name: ds-m
+            labels:
+              name: xyz
+       spec:
+         tolerations:
+            - key: node-role.kubernetes.io/control-plane
+              operator: Exists
+              effect: NoSchedule
+         containers:
+            - name: dsm
+              image: nginx
+
+     selector:
+      matchLabels:
+         name: xyz
+
