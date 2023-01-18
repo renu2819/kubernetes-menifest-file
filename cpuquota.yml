@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  creationTimestamp: null
+  name: quota
+spec:
+  hard:
+    count/deployments.apps: "2"
+    count/pods: "3"
+    count/replicatsets.apps: "4"
+    count/secrets: "4"
+    cpu: "1"
+    memory: "1G"
