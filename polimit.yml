@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web3
+spec:
+  containers:
+  - name: web3
+    image: nginx
+    resources:
+         requests:
+             memory: "500M"
+             cpu: "500m"
+         limits:
+             memory: "500M"
+             cpu: "500m"
