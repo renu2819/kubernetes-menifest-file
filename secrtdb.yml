@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dbsec
+  labels:
+    name: sec
+spec:
+  containers:
+  - name: dbsec
+    image: mysql
+    env:
+      - name: MYSQL_ROOT_PASSWORD
+        valueFrom:
+              secretKeyRef: 
+                      name: sec
+                      key: MYSQL_ROOT_PASSWORD     
+
