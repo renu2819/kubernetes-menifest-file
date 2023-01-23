@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: clusterip
+  name: clusterip
+spec:
+  ports:
+  - name: "cls"
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+      name: rs
+  type: ClusterIP
+

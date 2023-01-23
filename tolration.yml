@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-web3
+  labels:
+    name: genius
+spec:
+  containers:
+  - name: my-web3
+    image: nginx
+  tolerations:
+         - key: env
+           operator: "Equal"
+           effect: "NoSchedule"

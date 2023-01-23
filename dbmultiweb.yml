@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: lnb1
+  labels:
+    name: db
+spec:
+  containers:
+  - name: lnb1
+    image: ujjwaljoshi001/multiweb:v2
+    resources:
+          requests:
+             memory: "500M"
+             cpu: "500m"
+          limits:
+             memory: "500M"
+             cpu: "500m"
+    env:
+      - name: x
+        value: app1     
+

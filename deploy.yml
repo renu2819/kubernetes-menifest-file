@@ -15,4 +15,4 @@ spec:
     selector:
       matchLabels:
          name: rs
-    replicas: 3
+    replicas: 4

@@ -6,4 +6,10 @@ spec:
   containers:
   - name: web3
     image: nginx
-    
+    resources:
+         request:
+           memory: "500M"
+           Cpu:     "500m"
+          limits:
+             memory: "500M"
+             cpu: "500m"

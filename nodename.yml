@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web4
+  labels:
+    name: genius
+spec:
+  containers:
+  - name: web4
+    image: nginx
+  nodeName: work-2

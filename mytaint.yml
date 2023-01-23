@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-web
+  labels:
+    name: genius
+spec:
+  containers:
+  - name: my-web
+    image: nginx
+  tolerations:
+         - effect: "NoSchedule"
+           key: "mykey"
+           operator: "Equal"
+           value: "dev"  
